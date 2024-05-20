@@ -29,7 +29,7 @@ class JudgeBloc extends Bloc<JudgeEvent, JudgeState> {
           await http.get(Uri.parse('$baseUrl/languages'), headers: {
         'Content-Type': 'application/json; charset=UTF-8',
         'content-type': 'application/json',
-        'X-RapidAPI-Key': '275d5fb451msha4d8c58626ccf27p1a6688jsn62b6427cb1cf',
+        'X-RapidAPI-Key': 'your-api-keys',
         'X-RapidAPI-Host': 'judge0-extra-ce.p.rapidapi.com',
       });
       if (response.statusCode == 200) {
@@ -55,7 +55,7 @@ class JudgeBloc extends Bloc<JudgeEvent, JudgeState> {
           'Content-Type': 'application/json; charset=UTF-8',
           'content-type': 'application/json',
           'X-RapidAPI-Key':
-              '275d5fb451msha4d8c58626ccf27p1a6688jsn62b6427cb1cf',
+              'your-api-keys',
           'X-RapidAPI-Host': 'judge0-extra-ce.p.rapidapi.com',
         },
         body: json.encode({
@@ -86,7 +86,7 @@ class JudgeBloc extends Bloc<JudgeEvent, JudgeState> {
       await Future.delayed(const Duration(seconds: 2));
       final response =
           await http.get(Uri.parse('$baseUrl/submissions/$token'), headers: {
-        'X-RapidAPI-Key': '275d5fb451msha4d8c58626ccf27p1a6688jsn62b6427cb1cf',
+        'X-RapidAPI-Key': 'your-api-keys',
         'X-RapidAPI-Host': 'judge0-extra-ce.p.rapidapi.com'
       });
 
